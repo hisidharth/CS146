@@ -1,9 +1,0 @@
-For the flood fill problem, my solution was to use a recursive solution with a helper method.
-The given method was used to find the original color and pass that in as another parameter to a helper method 
-that does the filling.
-In this helper method, I check the case that the sr and sc are out of bounds or if the 
-starting pixel is not equal to the original color
-Next, I change the current pixel and make 4 recursive calls.
-These recursive calls check the pixels below above right and left.
-This happens recursively so all pixels that are connected will be filled.
-I do this by adding or subtracting from the r or c parameter 
