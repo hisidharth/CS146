@@ -1,0 +1,18 @@
+My solution for a level order search involved using a queue to keep track of discovered nodes
+a list to keep track of visited nodes and a list of lists to return a level order representation
+of a bst.
+
+First I added the root node to the queue as the first discovered node.
+The while loop will run so long there are elements in the queue.
+Inside the while loop I create a visited array every iteration of the while loop.
+This is because at the end of the while loop we want to add a list of the current level to the list of lists
+So we have to clear the exisiting vals in visited each while loop iteration to store each level separately.
+Next I keep track of the size of the queue before I start adding discovered children nodes.
+Next we hop into a for loop for whatever the size of the queue was before popping the first element.
+we pop the first element of the queue into visited and then add that node's children to the queue.
+After the for loop is done we hop out and add visited to the list of lists. 
+
+This happens until the queue is empty in which case we return the list of lists. 
+
+I would like to note that we are not actually adding nodes to these data structures. We are getting the vals from them
+Only the queue holds actual nodes. 
