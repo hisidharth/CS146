@@ -1,0 +1,13 @@
+For Matrix to list: loop over each row of the matrix. This will correspond to each node in the graph.
+For each node, loop over its adjacent nodes by looping through the columns of the matrix.
+Verify if an edge is between the current node "neighbor". (Check if 1 or 0)
+If there's an edge, add the neighbor's index to the list of neighbors for the current node.
+
+
+For list to matrix: For each node-neighbor pair, 
+set the corresponding place in the adjacency matrix to 1 as opposed to 0. 
+This shows there is an edge between the node and its neighbor.
+
+For each node and its neighbors the code will reverse the direction of each edge.
+We do this by iterating through the list of neighbors for each node and 
+add to the reversed graph where the neighbor becomes the key, and the vertex becomes a value in the list: thus reversing the graph

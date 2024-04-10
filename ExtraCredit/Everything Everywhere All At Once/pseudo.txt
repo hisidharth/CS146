@@ -1,0 +1,20 @@
+Given an adjacency list, how can you convert it to an adjacency matrix? 
+
+make empty matrix with dimensions from the length of the list ->
+Loop through vertexes in list -> Then go through the list for each vertex -> 
+Change val from 0 to 1 in matrix with coresponding vals (cur vertex and adjacent vertex) ->
+After looping through all vertexes in list return the matrix.
+
+nested forloop needed for this approach
+
+
+Given an adjacency matrix, how can you convert it to an adjacency list? 
+
+loop through each vertex -> loop through each column -> check to see if the edge exists from cur vertex to column vertex
+-> if true then add to innerlist by appending -> hop out of loop once done iterating and append the list to the list we will return
+-> hop out of the last loop and return list
+
+Given a directed graph, how can you reverse the direction of each edge? 
+
+For each vertex and its connected vertex -> pass that val ( (vertex1, vertex2) ) into a graph that we return. Instead with this graph we pass in values like this: (vertex2, vertex1)
+so basically iterate the graph and add the reverse into a different empty graph
