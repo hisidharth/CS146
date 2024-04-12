@@ -1,0 +1,30 @@
+Khan: For each node, we look at its adjacent nodes and count how many incoming edges each adjacent node has. 
+This count is stored as the in-degree of the adjacent node.
+Then, we create a queue and add all the nodes that have an in-degree of 0 to this queue. 
+These are the nodes that have no incoming edges.
+Next, we start a loop. In each iteration of this loop, 
+we take a node out of the queue. We add this node to the topological order 
+since it has no dependencies on other nodes.
+For each adjacent node of the dequeued node, we decrease its in-degree by 1. If this makes the in-degree of the adjacent node become 0,
+it means that all its dependencies have been satisfied, so we add it to the queue.
+We continue this process until there are no more nodes left in the queue. 
+At the end, we have a topological ordering of the nodes in the graph.
+
+BFS:First, we create two arrays: temp and inDegree. These arrays serve the same purpose as in Kahn's algorithm,
+where temp stores the topological order and inDegree represents the number of incoming edges to each node.
+Then, we set up a queue and add all nodes with an in-degree of 0 to the queue. These are the nodes that have no incoming edges.
+Next, we enter into a loop. In each iteration of this loop:
+We dequeue a node from the queue -> add this dequeued node to the topological order stored in the temp array
+->increment a counter to keep track of how many nodes we have processed.
+After dequeuing a node, we examine its adjacent nodes. 
+For each adjacent node: decrement its in-degree by 1, as we are removing an incoming edge from the dequeued node. 
+If the in-degree of the adjacent node becomes 0 after decrementing, it means that all its dependencies have been satisfied.
+So, we add this node to the queue.
+
+DFS: We set up a stack to keep track of the order in which nodes finish processing during depth-first search.
+We create a boolean array called visited to track which nodes have been visited. We iterate through each node in the graph.
+For each node: If the node has not been visited yet, we perform a depth-first search starting from that node using the dfsHelper function.
+The dfsHelper function recursively explores the graph: When visiting a node, we mark it as visited.
+We then explore all adjacent nodes of the current node. After exploring all adjacent nodes, we add the current node to the stack.
+After exploring all nodes, the stack contains the nodes in the reverse order of finishing time.
+This ordering ensures that if there is a directed edge from node A to node B, then node A will appear below node B in the stack.
