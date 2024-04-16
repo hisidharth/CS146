@@ -1,0 +1,9 @@
+We initialize a HashMap called inDegree to store the in-degree of each course, 
+setting all initial values to 0, and create a queue to hold courses with an in-degree of 0.
+To calculate the in-degrees, we iterate through the prerequisites list,
+incrementing the in-degree of each course accordingly.
+Then, we enqueue courses with an in-degree of 0.
+In the processing phase, we dequeue courses from the queue, 
+increment the count of processed courses, and update the in-degrees of dependent courses. 
+If a course's in-degree becomes 0, it's enqueued. Finally, we check if the count matches the total number of courses. 
+If so, we return True; otherwise, False. This approach ensures all prerequisites are met and avoids cycles
