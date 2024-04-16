@@ -1,0 +1,10 @@
+To start this solution I used the rules of a bst.
+The rule I used was that when printed to a list in an inorder traversal, the values of a bst
+should be ascending.
+
+This was an easy way to check if a bst was valid or not so first I added each element using inorder traversal
+to an arrayList.
+
+After I had the arrayList returned, I checked if the i'th element of the arrayList was greater than the i+1'th 
+element of the arrayList thus verifying if the arrayList was in ascending order or not.
+

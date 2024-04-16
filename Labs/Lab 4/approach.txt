@@ -1,0 +1,14 @@
+To invert a binary tree I used a recursive solution.
+
+The goal of each recursive call is to switch the right subtree with the left subtree.
+
+We can get to the lowest left subtree and right subtree with recursive calls 
+and once we have set values for the right and left
+we can swap the two.
+
+this simple solution works because each root points to its childern meaning if we shift the 
+position of the root, the children follow.
+
+Added a print method just to output the tree so I can verify the solution.
+
+
