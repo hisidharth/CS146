@@ -1,11 +1,11 @@
 In this approach, I decided to use two helper methods to find the cheapest pipe possible
 and the cheapest possible well. 
 
-I check the pipes outgoing from visited houses and compare those costs, to the well cost. 
-Depending on which one is cheaper I add that cost to the total cost and mark it as visited. 
+I check the pipes outgoing from visited houses and compare those costs, to the cheapest well cost that is not in visted house. 
+Depending on which one is cheaper I add that cost to the total cost and mark the house as visited. 
 I also account for the bidirectional nature of these pipes as well with two if statements.
 
 In the case that the costs are the same I default to the pipe cost for the sake of consistency but
 if I changed the approach to default the well cost, the code would not change outputs because of the way my comparisons work in the helper methods.
 
-The reason I set some variables to infinity at first is because I am accounting for any size of input. 
+The reason I set some variables to infinity at first is because I am accounting for any type of input that could break the code.
