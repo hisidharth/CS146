@@ -1,0 +1,8 @@
+I decided to use a memoization approach to this problem as
+I identified overlapping steps that repeated through the process to find a optimal solution
+The overlapping step in this situation is finding the minimum combination of coins.
+I store the minimum number of coins needed for amounts leading up to the final amount in the memo array.
+This way if I encounter those same ammounts in recurrsion I can easily access them without repeating steps.
+The recursive step itself consists of: iterating the coin amounts and 
+checking if the current coin can be used to reduce the final amount. If this is the case 
+we can call the function again expect with the new amount. 
