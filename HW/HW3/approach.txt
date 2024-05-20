@@ -1,0 +1,44 @@
+PROBLEM 1:
+
+Insertion sort has a:
+BestCase: o(n), WorsCase: o(n^2), AvgCase o(n^2)
+
+analysis of the algorith: 
+Insertion sort grows differently based on the inputed list. So if the list is already in its place only one comparison is needed between values
+This is not the case for the avg case and worst case.
+
+The recurrance relation for Insertion sort can be described as the follows:
+T(N) = T(n-1) + o(n)
+T(N) = T(n-2) + o(n-1) + o(n)
+This pattern continues.
+T(1) = o(1)
+T(2) = T(1) + o(2)
+
+We can identify the pattern the function is increasing as a the summation series from 1 to n: n(n+1)/2 which simplifies to O(n^2).
+ 
+
+
+PROBLEM 2: 
+
+MATRIX_MULTIPLY(A, B): 
+  if columns(A) ≠ rows(B): 
+    raise ValueError("Matrix multiplication is not defined.") 
+
+  rows_A ← number of rows in A 
+  cols_A ← number of columns in A 
+  cols_B ← number of columns in B 
+  result ← matrix of size rows_A x cols_B filled with zeros 
+
+  for i from 1 to rows_A do: 
+    for j from 1 to cols_B do: 
+    sum ← 0 
+      for k from 1 to cols_A do: 
+        sum ← sum + A[i][k] * B[k][j] 
+      result[i][j] ← sum return result
+
+The time complexity of the above can be understood by analyzing the for loops. 
+We can see a triple nested for loop that iterates from 1 to the numbers of Rows in A. Then from 1 to the number of columns in B.
+Lastly from 1 to columns in A. 
+
+Therefore we can say the time complexity of this algorithm is O(rows_A * cols_A * cols_B)
+
