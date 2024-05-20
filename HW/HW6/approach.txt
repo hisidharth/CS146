@@ -1,0 +1,7 @@
+I used a hashset for this approach.  I first sort the input array and then iterate 
+until the second to last elemtent.
+Now we try to find the opposite of the current element and use two pointers 
+to find two elemnts that add up to that target value.
+We can find triplets like this but we still need to account for duplicates. 
+I use a hashset to store triplets. This ensures no duplicates. 
+After I process all triplets into the hashset, I then add the contents of the set into result and return result.
