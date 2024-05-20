@@ -1,0 +1,4 @@
+The search method implements binary search to efficiently locate the first bad version. 
+The isBadVersion method checks if a given version is bad. In the main method, an instance of the solution class is created,
+and the search method is called with the number of versions and the array of versions as arguments. 
+The result is then printed to the console.
