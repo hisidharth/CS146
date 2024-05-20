@@ -1,0 +1,5 @@
+For this problem I decided to use arrays and compare the two strings.
+I first made sure the strings were the same size.
+I then populate a character array for each string and then sort the strings so if they are anagrams of eachther, the sorted version of these strings should be idenctial.
+After sorting I compare the strings and if they are the same, return true, if not return false. 
+
