@@ -1,0 +1,39 @@
+Problem 1:
+
+1: For this problem we can disregard the 10000000000 and take n^2. 
+So n^3 is asympoticaly greater. n^3 grows faster than n^2 does.
+
+2: We can take highest degrees here so asympoticaly we compare as such:
+n^2log(n) grows faster than n(logn)^10 so asympoticaly n^2logn is greater. 
+
+3: As n approach infinity: 2^(sqrtn) is an exponential function so it will grow faster when taking end behavior into account.
+This is opposed to a logarithmic function growth that is much slower to grow than a exponential function.
+So 2^(sqrtn) is greater. Graphically, the logarithmic function is faster in the start but as n gets extremely large, the exponential function grows faster.
+
+4: We can simplify 2^(2n) to 4^n. Now we can compare 2^n and 4^n. On first look the two functions are similar but we can asses them asympoticaly.
+For any arbitrary constant, while n is very large, if this constant is multiplied to 2^n there is no mathematical way for 4^n to be smaller. 
+So 4^n is greater. 
+
+
+Problem 2:
+
+isPrime(n): 
+  for(i = 2, i*i <= n; i++) {
+    if(n % i == 0) {
+      return false
+    }
+  return true
+  }
+
+The best case for this function would be for n mod i = 0 to return false on the first iteration. So this would be o(1)
+However this is the best case for a reason, most cases like the Worst one will be larger. In this case, 
+the function will iterate through all integers from 2 to the square root of n. So time complexity would be o(sqrt(n)) as you are incrementing by a sqaure so the time it takes would be the sqare root.
+
+In the Average Case would be the middle value of the range of possible numbers so this would divide the worst case by 2.
+But when calculating time complexity we do not consider this division of 2 and thus we take sqrt(n) as the answer.
+So o(sqrt(n))
+
+
+
+
+
