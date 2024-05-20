@@ -1,0 +1,40 @@
+Problem 1:
+
+For insertion sort, what is the 
+
+Best Case
+Average Case
+Worst Case
+Time complexity? Show your reasoning and work. 
+
+Best case is O(n) Worst/Average case is O(n^2)
+
+For best case every value needs only one comparison so it would depend on how many values are in the list hence o(n)
+The worst case would mean every value is in its reversed position requiring n times more comparisons. So we can say o(n^2)
+The average case would mean on averge half of the values need more than one comparison so we can divide the worst case by 2. This will still give us o(n^2)
+
+
+Problem 2:
+MATRIX_MULTIPLY(A, B): 
+  if columns(A) ≠ rows(B): 
+    raise ValueError("Matrix multiplication is not defined.") 
+
+  rows_A ← number of rows in A 
+  cols_A ← number of columns in A 
+  cols_B ← number of columns in B 
+  result ← matrix of size rows_A x cols_B filled with zeros 
+
+  for i from 1 to rows_A do: 
+    for j from 1 to cols_B do: 
+    sum ← 0 
+      for k from 1 to cols_A do: 
+        sum ← sum + A[i][k] * B[k][j] 
+      result[i][j] ← sum return result
+
+
+Best Case is (1) if the size of the matrix is 0.
+Average Case (rows_A * cols_A * cols_B) or o(n^3) In the average case however the matrix would not be 0 and would have a real size. 
+The program runs through all the rows of a and cols of b and cols of a. So we can multiply all these runnning conditions to get the complexity.
+Worst Case (rows_A * cols_A * cols_B) The worst case would also o(n^3) as the program would still have to run through all cols of a and b and rows of a.
+
+The runtime of this algorithm is always dependant on the size of the matrix. 
