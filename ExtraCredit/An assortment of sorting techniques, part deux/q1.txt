@@ -1,0 +1,54 @@
+Can we use heaps as priority queues? How so? Write an explanation, 
+with the help of pseudocode/diagrams to support your explanation.
+
+We can use heaps as priority queues because conceptually a minheap or maxheap is a priority queue.
+Elements with a higher priority in a minHeap would be the least values and would thus be dequeued first. 
+The same goes for maxHeaps excepet the greatest values would be dequeued first. 
+
+We can easily do this in java using the prioity queue library but we can also manually implement the heapify functionality.
+
+   make the empty heap called heap;
+
+   enqueue(value){insert element to the bottom of queue, then heapify}
+
+    heapify(takes in the heap and the index)
+        while index is more than 1:
+            parentindex = parent(index)
+            if heap[index] < heap[parent_index] then
+                swap heap[index] with heap[parent_index]
+                index = parent_index
+        while the left child's index <= size:
+            minindex = index of left child
+            if rightchild index <= size and value at rightchild's index < value at minindex then
+                minindex = index of the right child
+        
+            if value at index > valye at minindex:
+                swap those two
+                index = minindex
+            
+    dequeue():
+        Store the minimum element
+        Replace root with last value, then decrease size
+        heapify(heap, 1)
+        return min element
+
+Given a max heap, is there a way to use the max heap as a min heap, 
+without writing a whole min heap implementation?
+Is the opposite also true? Justify your answer with pseudocode,
+and/or python OR java code, and explain your answer.  
+
+An easy way to approach this question is to understand that minHeap and maxHeaps 
+that are identical in values will just be inverted versions of eachother.
+Therefore, we can just invert the values to change the order from acending to decending or vice versa.
+Instead of changing the heapify logic we can keep the heapify methods the same and before returing the heap we just invert the order.
+
+ for( i = 0; i < length/2)
+    aux = heap[i];
+    heap[i] = heap[(length - 1) - i];
+    heap[(length - 1) - i] = aux;
+
+
+I am using java operation logic here so we are using integer division when doing len/2
+
+This inversion could be its own method that is called after any opperation that involves heapify.
+We can also use collection.reverse in java but I think that would be too easy.

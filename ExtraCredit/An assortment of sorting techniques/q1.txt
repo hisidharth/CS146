@@ -1,0 +1,19 @@
+In class, we briefly discussed that Merge Sort was stable, and Quick Sort is unstable.
+Why would this property be useful? Is there an issue 
+if this property does not hold good for a sorting algorithm?
+
+Stability is important when thinking about sorting algorithms 
+because of the various types of user inputs the problem could be dealing with.
+
+For example, if we know for a fact that the constriants of a certain problem do not allow for duplicate values. 
+Then we can use an unstable algorithm becuase it does not matter how we handle the order of duplicates.
+
+But if we are given duplicate values in a set that we have to sort. 
+We should be able to always preserve the relative order of the duplicate elements.
+Relative order is especially important when sorting elements based on multiple keys. 
+
+Stability may not seem like a huge issue when sorting things like numbers becuase identical numbers 
+can shift their relative order and we as humans will not be able to detect the change.
+But when sorting more complex values and objects we want our sorting to be predictable especially if we are sorting based on differnt keys, 
+for example employee names, their age, and id numbers. If two people have the same name, our sorting algorithm should presrve their relative order
+For the future sorting of their age and id numbers
