@@ -1,0 +1,5 @@
+For this approach I used a hasmap to store the frequency of each character in the inputed string.
+From there, if the frequency of the character is even, we can then include the character (and all its appearences) in the palindrome.
+If the frequency of the character is odd, then we can include one less of the character in the palindrome. 
+If there was at least one character with an odd frequency 
+we can add one to the length because we need a center to the palindrome.

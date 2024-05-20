@@ -1,0 +1,6 @@
+For this approach I decided to use a minHeap to keep track of server values. 
+First I decided to sort the given intervals based on the starting value. 
+Then I use a minHeap to keep track of the end times for the servers.
+Then we check if the start time is greater than or equal to the end time of the meeting at the top of the minHeap.
+If this is the case, the current interval can reuse the room of the meeting that just ended. 
+We then pop this earliest ending meeting from the minHeap.
